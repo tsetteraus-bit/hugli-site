@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hugli: little ways to look after each other</title>
+<meta name="description" content="A private little app for two: share how your day is going with one tap, and send a hug, a nudge or a note.">
+<meta property="og:title" content="Hugli: little ways to look after each other">
+<meta property="og:description" content="A private little app for two: share how your day is going with one tap, and send a hug, a nudge or a note.">
+<meta property="og:image" content="https://hugli.app/mochi.png">
+<link rel="icon" href="/mochi.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Inter:wght@400;600&display=swap">
+<style>
+:root{--bg:#FFF8F7;--card:#FFFFFF;--ink:#1C1A23;--muted:#5E5866;--border:#F0DADD;--rose:#C2334D;--rose-dark:#9E2239;--rose-soft:#FCE3E8}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--rose-dark)}a:hover{color:var(--rose)}
+.wrap{max-width:760px;margin:0 auto;padding:24px 16px 64px}
+header.top{display:flex;align-items:center;gap:12px;padding:8px 0 24px}
+header.top img{width:44px;height:44px;border-radius:12px}
+header.top a.brand{font:700 22px/1 Outfit,Inter,sans-serif;color:var(--ink);text-decoration:none}
+h1,h2,h3{font-family:Outfit,Inter,sans-serif;line-height:1.2;margin:0 0 .4em}
+h1{font-size:clamp(32px,7vw,52px);letter-spacing:-.5px}h2{font-size:24px;margin-top:1.6em}
+.hero{display:grid;gap:24px;align-items:center;padding:16px 0 8px}
+@media(min-width:720px){.hero{grid-template-columns:1.3fr 1fr}}
+.hero img{width:100%;max-width:300px;justify-self:center;border-radius:48px;box-shadow:0 20px 60px rgba(194,51,77,.25)}
+.lead{font-size:20px;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:20px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:12px}
+.grid .card h3{font-size:18px}
+.grid .card p{margin:0;color:var(--muted);font-size:15px}
+form{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+label.sr{position:absolute;left:-9999px}
+input[type=email]{flex:1 1 220px;min-height:48px;padding:0 14px;border:1px solid var(--border);border-radius:14px;font:inherit;background:#fff;color:var(--ink)}
+button{min-height:48px;padding:0 20px;border:0;border-radius:14px;background:var(--rose);color:#fff;font:600 16px Inter,sans-serif;cursor:pointer}
+button:hover{background:var(--rose-dark)}
+#msg{width:100%;margin:4px 0 0;font-size:15px;min-height:1.4em}
+.promise{background:var(--rose-soft);border-color:var(--rose-soft)}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--border);font-size:14px;color:var(--muted)}
+footer nav{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:8px}
+.doc ul{padding-left:1.2em}.doc p,.doc li{margin:.3em 0}
+.muted{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><img src="/mochi.png" alt=""><a class="brand" href="/">Hugli</a></header>
+
+<main>
+<section class="hero">
+  <div>
+    <h1>Little ways to look after each other.</h1>
+    <p class="lead">Love is making sure they ate. Hugli is a private little app for two: share how your day is going with one tap, and send a hug, a nudge or a note when they need it.</p>
+    <div class="card">
+      <h2 style="margin-top:0;font-size:20px">Coming soon to Google Play</h2>
+      <p class="muted" style="margin:0">Join the waitlist and we'll let you know when Hugli is ready.</p>
+      <form id="wl">
+        <label class="sr" for="email">Email address</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email">
+        <button type="submit">Join the waitlist</button>
+        <p id="msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+  <img src="/mochi.png" alt="Mochi, the Hugli bunny, smiling with a little heart">
+</section>
+
+<h2>Care, not control</h2>
+<div class="grid">
+  <div class="card"><h3>One tap</h3><p>"I ate", "+1 water", "good morning". No typing, no fuss.</p></div>
+  <div class="card"><h3>Only when it matters</h3><p>A gentle heads-up if they haven't had lunch, not a stream of updates.</p></div>
+  <div class="card"><h3>Send a little love</h3><p>Hugs, nudges, voice notes and little notes that wait at the top of their screen.</p></div>
+  <div class="card"><h3>Made for distance</h3><p>Sees the day on their clock, so "2 pm" means their 2 pm.</p></div>
+</div>
+
+<h2>Your privacy, by design</h2>
+<div class="card promise">
+  <p style="margin-top:0">Hugli only works between two people who have both chosen to link. You decide what your partner sees, you can pause sharing anytime, and either of you can unlink instantly.</p>
+  <p style="margin-bottom:0">No location. No ads. Nothing sold. <a href="/privacy.html">Read the privacy policy</a>.</p>
+</div>
+<p class="muted" style="font-size:14px">Hugli is not a medical or emergency service.</p>
+</main>
+<script>
+document.getElementById('wl').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  var msg = document.getElementById('msg'), email = document.getElementById('email').value.trim();
+  msg.textContent = 'Adding you…';
+  try {
+    var r = await fetch('https://fpginklvarnmxoqtpzww.supabase.co/rest/v1/waitlist', {
+      method: 'POST',
+      headers: { apikey: 'sb_publishable_t2kc8e_IDGnzzPqMo1yBiQ_VGCmQNl3', Authorization: 'Bearer sb_publishable_t2kc8e_IDGnzzPqMo1yBiQ_VGCmQNl3', 'Content-Type': 'application/json', Prefer: 'return=minimal' },
+      body: JSON.stringify({ email: email })
+    });
+    if (r.ok) { msg.textContent = "You're on the list. We'll be in touch!"; e.target.reset(); }
+    else if (r.status === 409) { msg.textContent = "You're already on the list."; }
+    else { msg.textContent = 'Something went wrong. Please try again, or email hello.hugliapp@gmail.com.'; }
+  } catch (err) { msg.textContent = 'No connection. Please try again.'; }
+});
+</script>
+<footer>
+<nav><a href="/">Home</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/support.html">Support</a><a href="/delete-account.html">Delete your account</a></nav>
+<div>Hugli is operated by Saurabh Dhokwal (ABN 46 284 804 580), Melbourne, Australia · <a href="mailto:hello.hugliapp@gmail.com">hello.hugliapp@gmail.com</a></div>
+</footer>
+</div>
+</body>
+</html>
